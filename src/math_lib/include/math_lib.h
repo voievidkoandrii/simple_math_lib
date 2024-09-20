@@ -35,4 +35,5 @@ namespace MathLib
 	}
 	
 	bool isEqual(double a, double b, double tolerance = 0.000000001);
+    bool isPrime(int n);
 }

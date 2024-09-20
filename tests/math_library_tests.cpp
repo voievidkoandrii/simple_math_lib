@@ -52,3 +52,10 @@ TEST_F(MathLibTestFixture, DivideByZero)
     EXPECT_TRUE(GetLogFileText(text));
     EXPECT_NE(text.find("[Info]"), std::string::npos);
 }
+
+TEST(MathLibTest, IsPrimeTest){
+    EXPECT_TRUE(isPrime(2));
+    EXPECT_TRUE(isPrime(3));
+    EXPECT_TRUE(isPrime(4));
+    EXPECT_TRUE(isPrime(5));
+}
