@@ -52,3 +52,8 @@ TEST_F(MathLibTestFixture, DivideByZero)
     EXPECT_TRUE(GetLogFileText(text));
     EXPECT_NE(text.find("[Info]"), std::string::npos);
 }
+
+TEST_F(MathLibTestFixture, AddTwoValues)
+{
+    EXPECT_EQ(MathLib::GCD(10, 6), 2);
+}
