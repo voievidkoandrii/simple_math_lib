@@ -54,3 +54,12 @@ TEST_F(MathLibTestFixture, DivideByZero)
         EXPECT_EQ(e.what(), "Division by zero is not allowed.");
     }
 }
+
+TEST_F(MathLibTestFixture, SquareRoot)
+{
+    EXPECT_EQ(MathLib::sqrt(0), 0);
+    EXPECT_EQ(MathLib::sqrt(1.231), 1.1095);
+    EXPECT_EQ(MathLib::sqrt(16), 4);
+    EXPECT_EQ(MathLib::sqrt(123), 11.0905);
+    EXPECT_THROW(MathLib::sqrt(-1), std::invalid_argument("Cannot get the square root of a negative number"));
+}
