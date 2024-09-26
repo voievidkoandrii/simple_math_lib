@@ -21,7 +21,7 @@ namespace MathLib
         {
             count++;
             result = 0.5 * (x + (n / x));
-            if (abs(result - x) < 0.00001)
+            if (isEqual(result, x, 0.00001))
                 break;
             x = result;
         }
