@@ -6,6 +6,7 @@ namespace MathLib
     {
         return abs(a - b) <= tolerance;
     }
+
     int leastCommonMultiple(int a, int b)
     {
         int lcm = 1;
