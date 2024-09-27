@@ -1,12 +1,13 @@
 #include "math_lib.h"
+#include <cmath>
 
 namespace MathLib
 {
-    bool isEqual(double a, double b, double tolerance)
+    bool isEqual(double a, double b, double tolerance = 0.000000001)
     {
         return abs(a - b) <= tolerance;
     }
-
+ 
     template <typename T>
     double sqrt(T a)
     {
@@ -26,5 +27,33 @@ namespace MathLib
             x = result;
         }
         return result;
+    }
+
+    bool isPrime(int n)
+    {
+        if (n <= 1)
+            return false;
+        
+        for (int i = 2; i * i <= n; i++)
+        {
+            if (n % i == 0)
+                return false;        
+        }
+        return true;
+    }
+
+    int leastCommonMultiple(int a, int b)
+    {
+        int lcm = 1;
+        int maxNum = std::max(a, b);
+        for (int i = maxNum; i <= a * b; i += maxNum)
+        {
+            if (i % a == 0 && i % b == 0)
+            {
+                lcm = i;
+                break;
+            }
+        }
+        return lcm;
     }
 }

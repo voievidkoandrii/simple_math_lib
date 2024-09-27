@@ -36,9 +36,12 @@ namespace MathLib
         return a / b;
     }
     
-    bool isEqual(double a, double b, double tolerance = 1.e-8f);
+	bool isEqual(double a, double b, double tolerance = 0.000000001);
 
     // Square root function
     template <typename T>
     double sqrt(T a);
+ 
+    bool isPrime(int n);
+	int leastCommonMultiple(int a, int b);
 }
