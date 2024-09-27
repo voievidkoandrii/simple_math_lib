@@ -36,6 +36,11 @@ namespace MathLib
 		return a / b;
 	}
 	
+	bool isEqual(double a, double b, double tolerance = 0.000000001);
+
+    bool isPrime(int n);
+
 	bool isEqual(double a, double b, double tolerance = 1.e-8f);
 	int leastCommonMultiple(int a, int b);
 }
+

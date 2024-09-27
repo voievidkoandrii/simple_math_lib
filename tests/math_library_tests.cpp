@@ -62,3 +62,11 @@ TEST_F(MathLibTestFixture, LeastCommonMultiple)
 
     EXPECT_NE(MathLib::leastCommonMultiple(4,6), 3);
 }
+
+
+TEST(MathLibTest, IsPrimeTest){
+    EXPECT_TRUE(isPrime(2));
+    EXPECT_TRUE(isPrime(3));
+    EXPECT_TRUE(isPrime(4));
+    EXPECT_TRUE(isPrime(5));
+}
