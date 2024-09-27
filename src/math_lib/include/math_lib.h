@@ -1,5 +1,7 @@
 #pragma once
 
+#include <exception>
+
 namespace MathLib
 {
 	// Function for addition
@@ -29,7 +31,7 @@ namespace MathLib
 	{
 		if (b == 0)
 		{
-			throw std::invalid_argument("Division by zero is not allowed.");
+			throw "Division by zero is not allowed.";
 		}
 		return a / b;
 	}
@@ -37,4 +39,8 @@ namespace MathLib
 	bool isEqual(double a, double b, double tolerance = 0.000000001);
 
     bool isPrime(int n);
+
+	bool isEqual(double a, double b, double tolerance = 1.e-8f);
+	int leastCommonMultiple(int a, int b);
 }
+
