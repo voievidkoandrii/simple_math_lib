@@ -33,6 +33,8 @@ namespace MathLib
 		}
 		return a / b;
 	}
+
+	int GCD(int a, int b) {};
 	
 	bool isEqual(double a, double b, double tolerance = 0.000000001);
 }
