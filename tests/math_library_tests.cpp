@@ -78,3 +78,8 @@ TEST_F(MathLibTestFixture, IsPrimeTest){
     EXPECT_FALSE(isPrime(4));
     EXPECT_TRUE(isPrime(5));
 }
+
+TEST_F(MathLibTestFixture, AddTwoValues)
+{
+    EXPECT_EQ(MathLib::GCD(10, 6), 2);
+}
