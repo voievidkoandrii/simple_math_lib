@@ -54,3 +54,11 @@ TEST_F(MathLibTestFixture, DivideByZero)
         EXPECT_EQ(e.what(), "Division by zero is not allowed.");
     }
 }
+TEST_F(MathLibTestFixture, LeastCommonMultiple)
+{
+    EXPECT_EQ(MathLib::leastCommonMultiple(4, 6), 12);
+    EXPECT_EQ(MathLib::leastCommonMultiple(7, 5), 35);
+    EXPECT_EQ(MathLib::leastCommonMultiple(10, 5), 10);
+
+    EXPECT_NE(MathLib::leastCommonMultiple(4,6), 3);
+}

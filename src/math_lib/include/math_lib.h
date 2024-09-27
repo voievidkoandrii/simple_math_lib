@@ -37,4 +37,5 @@ namespace MathLib
 	}
 	
 	bool isEqual(double a, double b, double tolerance = 1.e-8f);
+	int leastCommonMultiple(int a, int b);
 }
