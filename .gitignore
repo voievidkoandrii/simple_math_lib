@@ -33,3 +33,4 @@
 
 # build folder if exist
 build/
+.vscode/
