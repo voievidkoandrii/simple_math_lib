@@ -57,6 +57,8 @@ jobs:
             # mandatory
             -Dsonar.projectKey=illiakhamula_simple_math_lib
             -Dsonar.organization=illiakhamula
+            -Dsonar.host.url=https://sonarcloud.io
+            -X
             # Comma-separated paths to directories containing main source files.
             #-Dsonar.sources= # optional, default is project base directory
             # Comma-separated paths to directories containing test source files.
