@@ -43,6 +43,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up CMake
+        uses: jwlawson/actions-setup-cmake@v1
+        with:
+          cmake-version: '3.21.1'  # Specify your desired CMake version
+
+      - name: Build the project
+        run: |
+          mkdir build
+          cd build
+          build-wrapper-linux-x86-64 --out-dir bw-output cmake ..
+          build-wrapper-linux-x86-64 --out-dir bw-output make
+
       - name: Analyze with SonarCloud
 
         # You can pin the exact commit or the version.
