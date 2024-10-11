@@ -46,12 +46,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Download and Install Build Wrapper
-        run: |
-          wget https://sonarcloud.io/static/cpp/build-wrapper-linux-x86-64.zip
-          unzip build-wrapper-linux-x86-64.zip
-          chmod +x build-wrapper-linux-x86-64
-      
       - name: Set up CMake
         uses: jwlawson/actions-setup-cmake@v1
         with:
@@ -61,8 +55,8 @@ jobs:
         run: |
           mkdir build
           cd build
-          ../build-wrapper-linux-x86-64 --out-dir bw-output cmake ..
-          ../build-wrapper-linux-x86-64 --out-dir bw-output make
+          build-wrapper-linux-x86-64 --out-dir bw-output cmake ..
+          build-wrapper-linux-x86-64 --out-dir bw-output make
 
       - name: Analyze with SonarCloud
 
