@@ -42,5 +42,16 @@ namespace MathLib
 		if (b == 0) return a;
 		return GCD(b, a % b);
 	}
+
+    unsigned long long factorial(int n) {
+        if (n < 0) {
+            throw std::invalid_argument("n must be a non-negative integer.");
+        }
+        unsigned long long result = 1;
+        for (int i = 1; i <= n; ++i) {
+            result *= i;
+        }
+        return result;
+    }
 }
 
